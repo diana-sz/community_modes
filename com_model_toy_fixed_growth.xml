@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" sboTerm="SBO:0000624" level="3" version="1" fbc:required="false">
+  <model metaid="meta_SymmetricToy" id="SymmetricToy" name="Org1" fbc:strict="true">
+    <listOfUnitDefinitions>
+      <unitDefinition id="mmol_per_gDW_per_hr">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit kind="gram" exponent="-1" scale="0" multiplier="1"/>
+          <unit kind="second" exponent="-1" scale="0" multiplier="3600"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="org1_i" constant="true"/>
+      <compartment id="org1_e" constant="true"/>
+      <compartment id="org1_medium" constant="true"/>
+      <compartment id="medium" constant="true"/>
+      <compartment id="fraction_reaction" constant="true"/>
+      <compartment id="org2_e" constant="true"/>
+      <compartment id="org2_i" constant="true"/>
+      <compartment id="org2_medium" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="M_org1_S_org1_i" name="S" compartment="org1_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_X1_org1_e" name="X1" compartment="org1_e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_Y1_org1_e" name="Y1" compartment="org1_e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_Y2_org1_e" name="Y2" compartment="org1_e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_A_org1_i" name="A" compartment="org1_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_P_org1_i" name="P" compartment="org1_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_BM_org1_i" name="BM" compartment="org1_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_cpd11416_org1_medium" name="Biomass" compartment="org1_medium" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_X1_medium" name="X1" compartment="medium" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_Y1_medium" name="Y1" compartment="medium" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_Y2_medium" name="Y2" compartment="medium" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_f_biomass_met" name="Fraction Biomass Metabolite of org1" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_f_final_met" name="Final Fraction Reaction Metabolite" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_X1_org1_e_lb" name="org1_TP_X1_org1_e lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_X1_org1_e_ub" name="org1_TP_X1_org1_e upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_Y1_org1_e_lb" name="org1_TP_Y1_org1_e lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_Y1_org1_e_ub" name="org1_TP_Y1_org1_e upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_Y2_org1_e_lb" name="org1_TP_Y2_org1_e lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_Y2_org1_e_ub" name="org1_TP_Y2_org1_e upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_X1_ub" name="org1_TP_X1 upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_Y1_ub" name="org1_TP_Y1 upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_TP_Y2_lb" name="org1_TP_Y2 lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_v4_org1_i_ub" name="org1_v4_org1_i upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_v5_org1_i_ub" name="org1_v5_org1_i upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_bio_ub" name="org1_bio upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org1_to_community_biomass_ub" name="org1_to_community_biomass upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_X2_org2_e" name="X2" compartment="org2_e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_X2_medium" name="X2" compartment="medium" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_X2_org2_e_lb" name="org2_TP_X2_org2_e lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_X2_org2_e_ub" name="org2_TP_X2_org2_e upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_Y1_org2_e" name="Y1" compartment="org2_e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_Y1_org2_e_lb" name="org2_TP_Y1_org2_e lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_Y1_org2_e_ub" name="org2_TP_Y1_org2_e upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_Y2_org2_e" name="Y2" compartment="org2_e" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_Y2_org2_e_lb" name="org2_TP_Y2_org2_e lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_Y2_org2_e_ub" name="org2_TP_Y2_org2_e upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_S_org2_i" name="S" compartment="org2_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_X2_ub" name="org2_TP_X2 upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_P_org2_i" name="P" compartment="org2_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_Y1_lb" name="org2_TP_Y1 lower bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_A_org2_i" name="A" compartment="org2_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_TP_Y2_ub" name="org2_TP_Y2 upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_BM_org2_i" name="BM" compartment="org2_i" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_v4_org2_i_ub" name="org2_v4_org2_i upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_v5_org2_i_ub" name="org2_v5_org2_i upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_cpd11416_org2_medium" name="Biomass" compartment="org2_medium" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_bio_ub" name="org2_bio upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_f_biomass_met" name="Fraction Biomass Metabolite of org2" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_org2_to_community_biomass_ub" name="org2_to_community_biomass upper bound" compartment="fraction_reaction" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="M_cpd11416_medium" name="Community Biomass" compartment="medium" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_lb" value="-1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_default_ub" value="1000" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="cobra_0_bound" value="0" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="minus_inf" value="-INF" constant="true"/>
+      <parameter sboTerm="SBO:0000626" id="plus_inf" value="INF" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_org1_fraction_reaction_upper_bound" value="1" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_org2_fraction_reaction_upper_bound" value="1" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_f_final_lower_bound" value="1" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_f_final_upper_bound" value="1" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_community_biomass_lower_bound" value="1" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter sboTerm="SBO:0000625" id="R_community_biomass_upper_bound" value="1" units="mmol_per_gDW_per_hr" constant="true"/>
+      <parameter id="Abundance_org1" value="0.5" constant="false"/>
+      <parameter id="Abundance_org2" value="0.5" constant="false"/>
+      <parameter id="fixed_abundance_flag" value="0" constant="false"/>
+      <parameter id="fixed_growth_rate_flag" value="1" constant="false"/>
+      <parameter id="mu_c" value="1" constant="false"/>
+      <parameter id="shared_compartment_id" name="medium" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="R_org1_TP_X1_org1_e" name="EX_X1" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_X1_org1_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_X1_org1_e_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_X1_medium" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_X1_org1_e_lb" stoichiometry="0.01" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_TP_Y1_org1_e" name="EX_Y1" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_Y1_org1_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_Y1_org1_e_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_Y1_medium" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_Y1_org1_e_lb" stoichiometry="0.01" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_TP_Y2_org1_e" name="EX_Y2" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_Y2_org1_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_Y2_org1_e_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_Y2_medium" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_Y2_org1_e_lb" stoichiometry="0.01" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_TP_X1" name="TP_X1" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_X1_org1_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_X1_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org1_S_org1_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_TP_Y1" name="TP_Y1" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_Y1_org1_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_Y1_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org1_A_org1_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_TP_Y2" name="TP_Y2" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_org1_Y2_org1_e" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org1_P_org1_i" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_Y2_lb" stoichiometry="0.01" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_v4_org1_i" name="v4" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_S_org1_i" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_v4_org1_i_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org1_BM_org1_i" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_P_org1_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_v5_org1_i" name="v5" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_A_org1_i" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_v5_org1_i_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org1_BM_org1_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_bio" name="bio" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_BM_org1_i" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_bio_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org1_cpd11416_org1_medium" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction metaid="meta_R_EX_X1_medium" sboTerm="SBO:0000627" id="R_EX_X1_medium" name="X1 exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_X1_medium" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_EX_Y1_medium" sboTerm="SBO:0000627" id="R_EX_Y1_medium" name="Y1 exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_Y1_medium" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_EX_Y2_medium" sboTerm="SBO:0000627" id="R_EX_Y2_medium" name="Y2 exchange" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_Y2_medium" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_org1_to_community_biomass" name="org1_to_community_biomass" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_cpd11416_org1_medium" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_f_biomass_met" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_to_community_biomass_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_cpd11416_medium" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org1_fraction_reaction" name="org1_fraction_reaction" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="R_org1_fraction_reaction_upper_bound">
+        <listOfProducts>
+          <speciesReference species="M_f_final_met" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org1_TP_X1_org1_e_lb" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_TP_X1_org1_e_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_TP_Y1_org1_e_lb" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_TP_Y1_org1_e_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_TP_Y2_org1_e_lb" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_TP_Y2_org1_e_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_TP_X1_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org1_TP_Y1_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org1_TP_Y2_lb" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org1_v4_org1_i_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_v5_org1_i_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_bio_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_to_community_biomass_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org1_f_biomass_met" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_X1_org1_e_lb" sboTerm="SBO:0000632" id="R_SK_org1_TP_X1_org1_e_lb" name="org1_TP_X1_org1_e lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_X1_org1_e_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_X1_org1_e_ub" sboTerm="SBO:0000632" id="R_SK_org1_TP_X1_org1_e_ub" name="org1_TP_X1_org1_e upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_X1_org1_e_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_Y1_org1_e_lb" sboTerm="SBO:0000632" id="R_SK_org1_TP_Y1_org1_e_lb" name="org1_TP_Y1_org1_e lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_Y1_org1_e_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_Y1_org1_e_ub" sboTerm="SBO:0000632" id="R_SK_org1_TP_Y1_org1_e_ub" name="org1_TP_Y1_org1_e upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_Y1_org1_e_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_Y2_org1_e_lb" sboTerm="SBO:0000632" id="R_SK_org1_TP_Y2_org1_e_lb" name="org1_TP_Y2_org1_e lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_Y2_org1_e_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_Y2_org1_e_ub" sboTerm="SBO:0000632" id="R_SK_org1_TP_Y2_org1_e_ub" name="org1_TP_Y2_org1_e upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_Y2_org1_e_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_X1_ub" sboTerm="SBO:0000632" id="R_SK_org1_TP_X1_ub" name="org1_TP_X1 upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_X1_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_Y1_ub" sboTerm="SBO:0000632" id="R_SK_org1_TP_Y1_ub" name="org1_TP_Y1 upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_Y1_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_TP_Y2_lb" sboTerm="SBO:0000632" id="R_SK_org1_TP_Y2_lb" name="org1_TP_Y2 lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_TP_Y2_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_v4_org1_i_ub" sboTerm="SBO:0000632" id="R_SK_org1_v4_org1_i_ub" name="org1_v4_org1_i upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_v4_org1_i_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_v5_org1_i_ub" sboTerm="SBO:0000632" id="R_SK_org1_v5_org1_i_ub" name="org1_v5_org1_i upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_v5_org1_i_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_bio_ub" sboTerm="SBO:0000632" id="R_SK_org1_bio_ub" name="org1_bio upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_bio_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org1_to_community_biomass_ub" sboTerm="SBO:0000632" id="R_SK_org1_to_community_biomass_ub" name="org1_to_community_biomass upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org1_to_community_biomass_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_org2_TP_X2_org2_e" name="EX_X2" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_X2_org2_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_TP_X2_org2_e_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_X2_medium" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_TP_X2_org2_e_lb" stoichiometry="0.01" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_TP_Y1_org2_e" name="EX_Y1" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_Y1_org2_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_TP_Y1_org2_e_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_TP_Y1_org2_e_lb" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_Y1_medium" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_TP_Y2_org2_e" name="EX_Y2" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_Y2_org2_e" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_TP_Y2_org2_e_ub" stoichiometry="0.01" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_TP_Y2_org2_e_lb" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_Y2_medium" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_TP_X2" name="TP_X2" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_X2_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_X2_org2_e" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_S_org2_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_TP_Y1" name="TP_Y1" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_0_bound">
+        <listOfReactants>
+          <speciesReference species="M_org2_Y1_org2_e" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_P_org2_i" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_TP_Y1_lb" stoichiometry="0.01" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_TP_Y2" name="TP_Y2" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_Y2_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_Y2_org2_e" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_A_org2_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_v4_org2_i" name="v4" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_v4_org2_i_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_S_org2_i" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_BM_org2_i" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_P_org2_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_v5_org2_i" name="v5" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_v5_org2_i_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_A_org2_i" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_BM_org2_i" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_bio" name="bio" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_bio_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_BM_org2_i" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_org2_cpd11416_org2_medium" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction metaid="meta_R_EX_X2_medium" sboTerm="SBO:0000627" id="R_EX_X2_medium" name="X2 exchange" reversible="true" fast="false" fbc:lowerFluxBound="cobra_default_lb" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_X2_medium" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_org2_to_community_biomass" name="org2_to_community_biomass" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_f_biomass_met" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_to_community_biomass_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_cpd11416_org2_medium" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="M_cpd11416_medium" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_org2_fraction_reaction" name="org2_fraction_reaction" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="R_org2_fraction_reaction_upper_bound">
+        <listOfProducts>
+          <speciesReference species="M_f_final_met" stoichiometry="1" constant="true"/>
+          <speciesReference species="M_org2_TP_X2_org2_e_lb" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_TP_X2_org2_e_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_TP_Y1_org2_e_lb" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_TP_Y1_org2_e_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_TP_Y2_org2_e_lb" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_TP_Y2_org2_e_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_TP_X2_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_TP_Y1_lb" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_TP_Y2_ub" stoichiometry="0.01" constant="true"/>
+          <speciesReference species="M_org2_v4_org2_i_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_v5_org2_i_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_bio_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_to_community_biomass_ub" stoichiometry="10" constant="true"/>
+          <speciesReference species="M_org2_f_biomass_met" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_X2_org2_e_lb" sboTerm="SBO:0000632" id="R_SK_org2_TP_X2_org2_e_lb" name="org2_TP_X2_org2_e lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_X2_org2_e_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_X2_org2_e_ub" sboTerm="SBO:0000632" id="R_SK_org2_TP_X2_org2_e_ub" name="org2_TP_X2_org2_e upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_X2_org2_e_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_Y1_org2_e_lb" sboTerm="SBO:0000632" id="R_SK_org2_TP_Y1_org2_e_lb" name="org2_TP_Y1_org2_e lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_Y1_org2_e_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_Y1_org2_e_ub" sboTerm="SBO:0000632" id="R_SK_org2_TP_Y1_org2_e_ub" name="org2_TP_Y1_org2_e upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_Y1_org2_e_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_Y2_org2_e_lb" sboTerm="SBO:0000632" id="R_SK_org2_TP_Y2_org2_e_lb" name="org2_TP_Y2_org2_e lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_Y2_org2_e_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_Y2_org2_e_ub" sboTerm="SBO:0000632" id="R_SK_org2_TP_Y2_org2_e_ub" name="org2_TP_Y2_org2_e upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_Y2_org2_e_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_X2_ub" sboTerm="SBO:0000632" id="R_SK_org2_TP_X2_ub" name="org2_TP_X2 upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_X2_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_Y1_lb" sboTerm="SBO:0000632" id="R_SK_org2_TP_Y1_lb" name="org2_TP_Y1 lower bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_Y1_lb" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_TP_Y2_ub" sboTerm="SBO:0000632" id="R_SK_org2_TP_Y2_ub" name="org2_TP_Y2 upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_TP_Y2_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_v4_org2_i_ub" sboTerm="SBO:0000632" id="R_SK_org2_v4_org2_i_ub" name="org2_v4_org2_i upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_v4_org2_i_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_v5_org2_i_ub" sboTerm="SBO:0000632" id="R_SK_org2_v5_org2_i_ub" name="org2_v5_org2_i upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_v5_org2_i_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_bio_ub" sboTerm="SBO:0000632" id="R_SK_org2_bio_ub" name="org2_bio upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_bio_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction metaid="meta_R_SK_org2_to_community_biomass_ub" sboTerm="SBO:0000632" id="R_SK_org2_to_community_biomass_ub" name="org2_to_community_biomass upper bound sink" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_default_ub">
+        <listOfReactants>
+          <speciesReference species="M_org2_to_community_biomass_ub" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_f_final" name="final fraction reaction" reversible="false" fast="false" fbc:lowerFluxBound="R_f_final_lower_bound" fbc:upperFluxBound="R_f_final_upper_bound">
+        <listOfReactants>
+          <speciesReference species="M_f_final_met" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+      <reaction id="R_abundance_reaction" name="Abundance Reaction" reversible="false" fast="false" fbc:lowerFluxBound="cobra_0_bound" fbc:upperFluxBound="cobra_0_bound">
+        <listOfProducts>
+          <speciesReference species="M_org1_f_biomass_met" stoichiometry="0.5" constant="true"/>
+          <speciesReference species="M_org2_f_biomass_met" stoichiometry="0.5" constant="true"/>
+        </listOfProducts>
+      </reaction>
+      <reaction id="R_community_biomass" name="community_biomass" reversible="false" fast="false" fbc:lowerFluxBound="R_community_biomass_lower_bound" fbc:upperFluxBound="R_community_biomass_upper_bound">
+        <listOfReactants>
+          <speciesReference species="M_cpd11416_medium" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+      </reaction>
+    </listOfReactions>
+    <fbc:listOfObjectives fbc:activeObjective="obj">
+      <fbc:objective fbc:id="obj" fbc:type="maximize">
+        <fbc:listOfFluxObjectives>
+          <fbc:fluxObjective fbc:reaction="R_community_biomass" fbc:coefficient="1"/>
+        </fbc:listOfFluxObjectives>
+      </fbc:objective>
+    </fbc:listOfObjectives>
+  </model>
+</sbml>

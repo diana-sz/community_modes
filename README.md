@@ -1,0 +1,1 @@
+A jupyter notebook to calculate elementary community flux modes using efmtool. 
